@@ -1,0 +1,10 @@
+.links{
+    display: flex;
+    gap: 10px;
+}
+.btnlogout{
+    padding: 10px;
+    background-color: #EE4E4E;
+    color: greenyellow;
+    border-radius: 20px;
+}
