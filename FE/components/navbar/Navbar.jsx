@@ -4,9 +4,9 @@ import styles from "./navbar.module.css"
 const Navbar = () => {
   return (
     <div className={styles.container}>
-        <div className={styles.logo}>logo</div>
+        <div herf="/" className={styles.logo}>logo</div>
         <div>
-           <Links />
+           <Links/>
         </div>
     </div>
     

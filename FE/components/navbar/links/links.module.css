@@ -1,0 +1,39 @@
+.links{
+    display: flex;
+    gap: 10px;
+}
+.btnlogout{
+    padding: 10px;
+    background-color: #EE4E4E;
+    color: greenyellow;
+    border-radius: 20px;
+}
+.mobileLinks {
+   display: none;
+}
+.menuButton{
+    display: none;
+}
+
+@media (max-width: 768px){
+    .menuButton {
+            display: block;
+        }
+    .links{
+        display: none;
+
+    }
+        .mobileLinks {
+            position: absolute;
+            top: 100px;
+            right: 0;
+            width: 20%;
+            height: calc(100vh - 100px);
+            background-color: #41B06E;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+}

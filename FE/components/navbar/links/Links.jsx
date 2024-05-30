@@ -1,8 +1,11 @@
-import Link from "next/link";
+"use client"
+
 import styles from "./links.module.css"
 import NavLink from "./navLink/navLink"
+import { use, useState } from "react";
 const Links = () => {
     
+
     const links = [
         {
             title: "Home",
@@ -21,10 +24,13 @@ const Links = () => {
             path: "/blog",
         }
     ];
+    const [open,setOpen] = useState(false)
+    
     const session = true;
     const isAdmin = false;
     return (
-        <div className={styles.links}>
+       <div className={styles.container}>
+             <div className={styles.links}>
             {links.map((link => (
                 <NavLink item = {link} key={link.title}/>
             )))}{
@@ -40,6 +46,15 @@ const Links = () => {
 
 
         </div>
+        <button className={styles.menuButton} onClick={() => setOpen((prev) => !prev)}>Menu</button>
+        {
+            open && <div className={styles.mobileLinks}>
+                 {links.map((link => (
+                <NavLink item = {link} key={link.title}/>
+                )))}
+            </div>
+        }
+       </div>
     );
 };
 
