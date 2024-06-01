@@ -8,14 +8,14 @@ const Navbar = () => {
 
     <div>
       <Row>
-        <Col md={3} className={styles.navitem}>
+        <Col md={3} sm={4} className={styles.navitem}>
           <div herf="/" className={styles.logo}>logo</div>
         </Col>
-        <Col md={6} className={styles.navitem}>
-            <Links />
-        </Col>
-        <Col md={3} className={styles.navitem}>
+        <Col md={3} sm={4} className={styles.navitem}>
           Search
+        </Col>
+        <Col md={6} sm={4} className={styles.navitem}>
+            <Links />
         </Col>
       </Row>
     </div>

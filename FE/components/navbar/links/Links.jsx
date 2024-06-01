@@ -3,6 +3,8 @@
 import styles from "./links.module.css"
 import NavLink from "./navLink/navLink"
 import { use, useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 const Links = () => {
     
 
@@ -52,7 +54,7 @@ const Links = () => {
 
 
         </div>
-        <button className={styles.menuButton} onClick={() => setOpen((prev) => !prev)}>Menu</button>
+            <div className={stylesdiv} onClick={() => setOpen((prev) => !prev)}><FontAwesomeIcon icon={faBars} /></div>
         {
             open && <div className={styles.mobileLinks}>
                  {links.map((link => (

@@ -48,11 +48,20 @@
 
 .ationimage {
     display: flex;
+    justify-content: center;
 }
+
+.ationimage:hover .pdimg {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 .pdimg {
     position: relative;
     width: auto;
 }
+
+.pdimg:hover {}
+
 .actionitemtop {
     position: absolute;
     list-style: none;
@@ -69,15 +78,7 @@
     right: 10px;
 }
 
-.actiontop {
-    width: 40px;
-    height: 40px;
-    border: solid .1px white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+.actiontop,
 .actionbot {
     width: 40px;
     height: 40px;
@@ -86,40 +87,82 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.actiontop:hover {
-    scale: 1.2;
-    background-color: var(--hovericon);
-    color: greenyellow;
+    position: relative;
 }
 
+.actionitemtop::after,
+.actionitembot::after {
+    padding: 5px;
+    display: none;
+    content: "Quick view";
+    position: absolute;
+    font-size: 10px;
+    display: flex;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: solid .5px;
+    justify-content: center;
+    align-items: center;
+  transition: all 1s ease-in-out;
+}
+
+.actionitemtop::after {
+    content: "Quick view";
+    right: -70px;
+    top: 6px;
+    display: none;
+    
+}
+
+.actionitembot::after {
+    content: "Add to wishlist";
+    left: -90px;
+    bottom: 6px;
+    display: none;
+}
+
+.actionitemtop:hover::after {
+    display: flex;
+}
+
+.actionitembot:hover::after {
+    display: flex
+}
+.actiontop:hover,
 .actionbot:hover {
     scale: 1.2;
     background-color: var(--hovericon);
-    color: red;
+
 }
 
-.iconactionbot {
+.actiontop:hover {
+    color: greenyellow;
+}
+
+
+.actionbot:hover{
     color: gray;
 
 }
 
 .iconactiontop {
-
     color: gray;
 }
 
-.iconactionbot:hover {
-    scale: 1.2;
-    color: red;
-}
 
 .iconactiontop:hover {
-    scale: 1.2;
+    scale: 1.1;
     color: greenyellow;
 }
 
+.iconactionbot:hover {
+    scale: 1.1;
+    color:var(--wishlist);
+
+}
+
 .pdinfo {
+    padding-top: 20px;
     text-align: center;
 }
 
