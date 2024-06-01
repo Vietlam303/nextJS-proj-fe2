@@ -11,6 +11,10 @@ const Links = () => {
             title: "Home",
             path: "/",
         },
+         {
+            title: "Shop Book",
+            path: "/shop",
+        },
         {
             title: "About",
             path: "/about",
@@ -29,11 +33,12 @@ const Links = () => {
     const session = true;
     const isAdmin = false;
     return (
-       <div className={styles.container}>
+       <div >
              <div className={styles.links}>
             {links.map((link => (
                 <NavLink item = {link} key={link.title}/>
-            )))}{
+            )))}
+            {/* {
                 session ? (
                    <>
                      {isAdmin && <NavLink item={{title:"Admin",path:"/admin"}}/>}
@@ -42,7 +47,8 @@ const Links = () => {
                 ) : (
                     <NavLink item ={{title:"Login", path:"/login"}}/>
 
-                )}
+                )} */
+                }
 
 
         </div>

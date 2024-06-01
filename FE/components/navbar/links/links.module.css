@@ -1,15 +1,23 @@
 .links{
-    display: flex;
+    text-align: start;
     gap: 10px;
+    padding: 5px;
+}
+.links a {
+    text-decoration: none;
 }
 .btnlogout{
-    padding: 10px;
+    padding: 5px;
     background-color: #EE4E4E;
     color: greenyellow;
-    border-radius: 20px;
+    border-radius:20px;
 }
 .mobileLinks {
    display: none;
+}
+.mobileLinks a {
+    text-decoration: none;
+    color: black;
 }
 .menuButton{
     display: none;
