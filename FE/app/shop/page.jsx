@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faList, faTableCells, faFilter, faHeart, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from 'react';
+import React, { useEffect } from 'react';
 
 const variants = {
    hidden: { opacity: 0 },
@@ -49,9 +50,19 @@ const ibot = {
    }
 }
 
+const customStyle = () => {
+   return {
+      color: 'red',
+      fontSize: '16px',
+   };
+};
 const ShopPage = () => {
+   const [open, setOpen] = useState(false)
    const [hoveredProduct, setHoveredProduct] = useState(null);
 
+   const handleClick = () => {
+      setOpen(!open);
+   };
    const handleMouseEnter = (index) => {
       setHoveredProduct(index);
    };
@@ -76,7 +87,7 @@ const ShopPage = () => {
                      </Row>
                      <Row className={styles.actionfill}>
                         <Col>Showing 1–16 of 21 results</Col>
-                        <Col className='text-end'><FontAwesomeIcon icon={faFilter} /> Filters</Col>
+                        <Col className='text-end' onClick={handleClick} style={{ color: open ? 'green' : 'black' }}><div className={styles.fillbtn} onClick={() => setOpen((prev) => !prev)} ><FontAwesomeIcon icon={faFilter} />Filters</div></Col>
                         <Col className='text-end'>
                            <ul className={styles.listgird}>
                               <li><FontAwesomeIcon icon={faTableCells} /></li>
@@ -84,31 +95,40 @@ const ShopPage = () => {
                            </ul>
                         </Col>
                      </Row>
-                     <Row className={styles.contentfill}>
-                        <Col md={3} sm={6} className={styles.fillitem}>
-                           <h4>Filter by price</h4>
-                           <ul>
-                              <li>All</li>
-                              <li>10000vnd</li>
-                           </ul>
-                        </Col>
-                        <Col md={3} sm={6} className={styles.fillitem}>
-                           <h4>Sort by</h4>
-                           <ul>
-                              <li>Default</li>
-                              <li>Price: Low to High</li>
-                              <li>Price: High to Low</li>
-                           </ul>
-                        </Col>
-                        <Col md={3} sm={6} className={styles.fillitem}>
-                           <h4>Filter by category</h4>
-                           <ul>
-                              <li>All</li>
-                              <li>Category 1</li>
-                              <li>Category 2</li>
-                           </ul>
-                        </Col>
-                     </Row>
+                     {
+                        open && <motion.div
+                           initial={{ opacity: 0, y: 20 }}
+                           animate={{ opacity: 1, y: 0 }}
+                           exit={{ opacity: 0, y: 0 }}
+                           transition={{ delay: 0.3 }}
+                        >
+                           <Row className={styles.contentfill}>
+                              <Col md={3} sm={6} className={styles.fillitem}>
+                                 <h4>Filter by price</h4>
+                                 <ul>
+                                    <li>All</li>
+                                    <li>10000vnd</li>
+                                 </ul>
+                              </Col>
+                              <Col md={3} sm={6} className={styles.fillitem}>
+                                 <h4>Sort by</h4>
+                                 <ul>
+                                    <li>Default</li>
+                                    <li>Price: Low to High</li>
+                                    <li>Price: High to Low</li>
+                                 </ul>
+                              </Col>
+                              <Col md={3} sm={6} className={styles.fillitem}>
+                                 <h4>Filter by category</h4>
+                                 <ul>
+                                    <li>All</li>
+                                    <li>Category 1</li>
+                                    <li>Category 2</li>
+                                 </ul>
+                              </Col>
+                           </Row>
+                        </motion.div>
+                     }
 
                      <motion.div
                         variants={variants}

@@ -15,79 +15,64 @@ class ProductSeeder extends Seeder
     {
         //
         Product::factory()->create([
-            'name' => 'The End of Money1',
+            'name' => 'A Poem for Every night',
             'price' => '307000',
             'reduced_price' => '291650',
-            'description' => 'The End of Money: Counterfeiters, Preachers, Techies, Dreamers--and the Coming Cashless Society
-            For ages, money has been represented by little metal disks and rectangular slips of paper. ',
-            'image' => 'TheEndofMoney.jpg',
+            'description' => 'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur erit qui in ea voluptate',
+            'image' => 'a-poem-for-every-night.jpg',
             'publishing_year' => '2013',
             'sale_id' => '3',
             'author_id' => '2',
         ]);
         Product::factory()->create([
-            'name' => 'The End of Money2',
+            'name' => 'A Teaspoon of Earth and Sea',
             'price' => '307000',
-            'reduced_price' => '291650',
-            'description' => 'Thông tin sản phẩm
-            Mã hàng	9780008407964
-            Tên Nhà Cung Cấp	Usborne
-            Tác giả	Christina Sweeney-Baird',
-            'image' => 'TheEndofMoney.jpg',
+            'reduced_price' => '231650',
+            'description' => 'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur erit qui in ea voluptate',
+            'image' => 'a-teaspoon-of-earth-and-sea.jpg',
             'publishing_year' => '2013',
-            'sale_id' => '2',
-            'author_id' => '3',
-        ]);
-        Product::factory()->create([
-            'name' => 'Tết Ở Làng Địa Ngục',
-            'price' => '169000',
-            'reduced_price' => '113230',
-            'description' => '
-            Thông tin sản phẩm
-            Mã hàng	8935212358279
-            Tên Nhà Cung Cấp Đinh Tị
-            Tác giả	Thảo Trang
-            NXB	NXB Thanh Niên
-            ',
-            'image' => 'tetolangdianguc.jpg',
-            'publishing_year' => '2022',
-            'sale_id' => '2',
-            'author_id' => '1',
-        ]);
-        Product::factory()->create([
-            'name' => 'Có Hai Con Mèo Ngồi Bên Cửa Sổ',
-            'price' => '100000',
-            'reduced_price' => '70000',
-            'description' => '
-            Thông tin sản phẩm
-            Mã hàng	8934974185178
-            Tên Nhà Cung Cấp	NXB Trẻ
-            Tác giả	Nguyễn Nhật Ánh
-            NXB	Trẻ
-            ',
-            'image' => 'co-hai-con-meo-ngoi-ben-cua-so.jpg',
-            'publishing_year' => '2023',
             'sale_id' => '3',
-            'author_id' => '3',
+            'author_id' => '2',
         ]);
-
-        for ($i = 1; $i < 16; $i++) {
-            Product::factory()->create([
-                'name' => 'Tết Ở Làng Địa Ngục'.$i,
-                'price' => '169000',
-                'reduced_price' => '113230',
-                'description' => '
-                Thông tin sản phẩm
-                Mã hàng	8935212358279
-                Tên Nhà Cung Cấp Đinh Tị
-                Tác giả	Thảo Trang
-                NXB	NXB Thanh Niên
-                ',
-                'image' => 'tetolangdianguc.jpg',
-                'publishing_year' => '2022',
-                'sale_id' => '2',
-                'author_id' => '1',
-            ]);
-        }
+        Product::factory()->create([
+            'name' => 'All this has nothing to do with Me',
+            'price' => '307000',
+            'reduced_price' => '231650',
+            'description' => 'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur erit qui in ea voluptate',
+            'image' => 'all-this-has-nothing-to-do-with-me.jpg',
+            'publishing_year' => '2013',
+            'sale_id' => '3',
+            'author_id' => '2',
+        ]);
+        Product::factory()->create([
+            'name' => 'Bulle & Pelle',
+            'price' => '307000',
+            'reduced_price' => '231650',
+            'description' => 'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur erit qui in ea voluptate',
+            'image' => 'bulle-&-pelle.jpg',
+            'publishing_year' => '2013',
+            'sale_id' => '3',
+            'author_id' => '2',
+        ]);
+        Product::factory()->create([
+            'name' => 'Bulle und Pelle',
+            'price' => '307000',
+            'reduced_price' => '231650',
+            'description' => 'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur erit qui in ea voluptate',
+            'image' => 'bulle-und-pelle.jpg',
+            'publishing_year' => '2013',
+            'sale_id' => '3',
+            'author_id' => '2',
+        ]);
+        Product::factory()->create([
+            'name' => 'Creative Life',
+            'price' => '307000',
+            'reduced_price' => '231650',
+            'description' => 'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur erit qui in ea voluptate',
+            'image' => 'creative-life.jpg',
+            'publishing_year' => '2013',
+            'sale_id' => '3',
+            'author_id' => '2',
+        ]);
     }
 }

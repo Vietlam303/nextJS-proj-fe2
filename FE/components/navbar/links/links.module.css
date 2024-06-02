@@ -2,6 +2,7 @@
     text-align: start;
     gap: 10px;
     padding: 5px;
+
 }
 .links a {
     text-decoration: none;
@@ -14,6 +15,7 @@
 }
 .mobileLinks {
    display: none;
+   z-index: 99;
 }
 .mobileLinks a {
     text-decoration: none;
