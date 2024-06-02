@@ -1,13 +1,14 @@
-'use client'
+'use client';
 import { Container, Row, Col } from 'react-bootstrap';
 import styles from './shop.module.css';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faList, faTableCells, faFilter, faHeart, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from 'react';
-import React, { useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import useSWR from "swr";
 
+// Animation variants
 const variants = {
    hidden: { opacity: 0 },
    show: {
@@ -49,15 +50,35 @@ const ibot = {
       }
    }
 }
-
-const customStyle = () => {
-   return {
-      color: 'red',
-      fontSize: '16px',
-   };
-};
 const ShopPage = () => {
-   const [open, setOpen] = useState(false)
+   // Fetcher function to fetch data from API
+   const fetcher = (url) => fetch(url).then((res) => res.json());
+
+   const [products, setProducts] = useState([]);
+   const [currentPage, setCurrentPage] = useState(1);
+
+   const { data, error, isLoading } = useSWR(
+      `http://127.0.0.1:8000/api/products?page=${currentPage}`,
+      fetcher
+   );
+
+   useEffect(() => {
+      console.log("Fetched data:", data); 
+      if (data) {
+         if (data.data) {  
+            console.log("Products in data:", data.data); 
+            setProducts((prevProducts) => [...prevProducts, ...data.data]);
+         } else {
+            console.log("No products found in data");
+         }
+      }
+   }, [data]);
+
+   const handleLoadMore = () => {
+      setCurrentPage((prevPage) => prevPage + 1);
+   };
+
+   const [open, setOpen] = useState(false);
    const [hoveredProduct, setHoveredProduct] = useState(null);
 
    const handleClick = () => {
@@ -70,6 +91,11 @@ const ShopPage = () => {
    const handleMouseLeave = () => {
       setHoveredProduct(null);
    };
+   // Kiểm tra xem đã hết sản phẩm để load hay không
+   const isAllProductsLoaded = data && data.to === data.total;
+
+   if (isLoading && currentPage === 1) return <div>Loading...</div>;
+   if (error) return <div>Error loading data</div>;
    return (
       <>
          <AnimatePresence>
@@ -86,8 +112,12 @@ const ShopPage = () => {
                         <Col className='text-end'>Home /<b>Shop</b></Col>
                      </Row>
                      <Row className={styles.actionfill}>
-                        <Col>Showing 1–16 of 21 results</Col>
-                        <Col className='text-end' onClick={handleClick} style={{ color: open ? 'green' : 'black' }}><div className={styles.fillbtn} onClick={() => setOpen((prev) => !prev)} ><FontAwesomeIcon icon={faFilter} />Filters</div></Col>
+                        <Col>Showing {products?.length} results</Col>
+                        <Col className='text-end' onClick={handleClick} style={{ color: open ? 'green' : 'black' }}>
+                           <div className={styles.fillbtn} onClick={() => setOpen((prev) => !prev)}>
+                              <FontAwesomeIcon icon={faFilter} /> Filters
+                           </div>
+                        </Col>
                         <Col className='text-end'>
                            <ul className={styles.listgird}>
                               <li><FontAwesomeIcon icon={faTableCells} /></li>
@@ -95,8 +125,8 @@ const ShopPage = () => {
                            </ul>
                         </Col>
                      </Row>
-                     {
-                        open && <motion.div
+                     {open && (
+                        <motion.div
                            initial={{ opacity: 0, y: 20 }}
                            animate={{ opacity: 1, y: 0 }}
                            exit={{ opacity: 0, y: 0 }}
@@ -128,7 +158,7 @@ const ShopPage = () => {
                               </Col>
                            </Row>
                         </motion.div>
-                     }
+                     )}
 
                      <motion.div
                         variants={variants}
@@ -136,7 +166,7 @@ const ShopPage = () => {
                         animate="show"
                      >
                         <Row className={styles.productitem}>
-                           {[1, 2, 3, 4].map((product, index) => (
+                           {products.map((product, index) => (
                               <Col key={index} md={3} sm={6} className={styles.productItem}>
                                  <motion.div
                                     className={styles.ationimage}
@@ -146,7 +176,7 @@ const ShopPage = () => {
                                     whileHover={{ scale: 1.05 }}
                                  >
                                     <div className={styles.pdimg}>
-                                       <Image src="/images/products/a-teaspoon-of-earth-and-sea.jpg" alt="A Teaspoon of Earth and Sea book cover" width={250} height={350}></Image>
+                                       <Image src={`/images/products/${product.image}`} alt={product.name} width={250} height={350} />
                                        {hoveredProduct === index && (
                                           <>
                                              <motion.div
@@ -174,8 +204,8 @@ const ShopPage = () => {
                                     </div>
                                  </motion.div>
                                  <div className={styles.pdinfo}>
-                                    <p className={styles.pdprice}>100000 VND</p>
-                                    <b><h4 className={styles.pdname}>A Teaspoon of Earth and Sea</h4></b>
+                                    <p className={styles.pdprice}>{product.reduced_price} VND</p>
+                                    <b><h4 className={styles.pdname}>{product.name}</h4></b>
                                     <p className={styles.pdauthor}><b>By</b> SAVANNA WALKER</p>
                                  </div>
                               </Col>
@@ -183,7 +213,13 @@ const ShopPage = () => {
                         </Row>
                      </motion.div>
 
-
+                     <div className={styles.pagination}>
+                        {!isAllProductsLoaded && (
+                           <button onClick={handleLoadMore} disabled={isLoading}>
+                              Load More
+                           </button>
+                        )}
+                     </div>
 
                   </Container>
                </div>

@@ -143,12 +143,11 @@
 
 
 .actionbot:hover{
-    color: gray;
-
+    color: var(--wishlist);
 }
 
-.iconactiontop {
-    color: gray;
+.iconactiontop,.iconactionbot {
+    color: white;
 }
 
 
