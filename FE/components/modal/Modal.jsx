@@ -59,8 +59,8 @@ function ModalDetail({ statusModal, setStatusModal, selectedProduct }) {
                                 <Col>
                                     <h3>{selectedProduct.name}</h3>
                                     <p>{selectedProduct.price}VND</p>
-                                    <b>Publishing Year :</b>
-                                    <p>{selectedProduct.publishing_year}</p>
+                                   
+                                    <p> <b>Publishing Year : </b>{selectedProduct.publishing_year}</p>
                                     <b>Description :</b>
                                     <p>{selectedProduct.description}</p>
                                     
