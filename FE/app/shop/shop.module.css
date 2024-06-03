@@ -2,6 +2,7 @@
     margin-top: 20px !important;
     background-color: var(--bg1);
     margin: 0;
+ 
 }
 
 .linkshop {
@@ -32,6 +33,7 @@
 
 .contentfill {
     background-color: white;
+   padding: 30px;
 }
 
 .fillitem {

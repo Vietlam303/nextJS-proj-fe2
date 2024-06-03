@@ -1,0 +1,25 @@
+.row{
+    /* width: 50vh;
+    height: max-content; */
+}
+.col{
+    height: 400px;
+    overflow: hidden;
+}
+.modalimg {
+    /* position: absolute;
+    display: contents;
+    justify-content: center;
+    align-items: center; */
+
+}
+
+.img {
+    /* position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; */
+
+
+}
