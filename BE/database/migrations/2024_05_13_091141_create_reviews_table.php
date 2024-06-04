@@ -16,6 +16,7 @@ return new class extends Migration
             $table->integer('product_id');
             $table->integer('user_id');
             $table->string('review_content');
+            $table->string('image');
             $table->timestamps();
         });
     }

@@ -22,6 +22,10 @@ const Links = () => {
             path: "/about",
         },
         {
+            title: "Review",
+            path: "/review",
+        },
+        {
             title: "Contact",
             path: "/contact",
         },
