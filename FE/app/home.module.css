@@ -139,15 +139,18 @@
   box-sizing: border-box;
   font-family: "Istok Web", sans-serif;
 }
+
 .navitem {
   align-items: center;
   justify-content: center;
   display: flex;
 }
+
 .navitem .image {
   margin-bottom: 35px;
   margin-top: 20px;
 }
+
 .cardAuthor {
   display: flex;
   min-height: 30vh;
@@ -309,6 +312,9 @@
   transform: scale(0.95);
   transition: box-shadow 0.5s, transform 0.5s;
   max-width: max-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .wrapper:hover {
@@ -492,52 +498,51 @@
   font-size: 13px;
 }
 
-.link{
-	color: #000000;
-	font-size: 16px;
-	font-weight: 700;
-	text-decoration: none;
-	text-transform: uppercase;
+.link {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
   max-width: max-content;
 }
 
-.link{
-	position: relative;
-	z-index: 1;
-	display: inline-flex;
-	margin-left: 1800px;
-	padding-left: 10px;
-	padding-bottom: 5px;
-	padding-right: 10px;
+.link {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  margin-left: 1800px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  padding-right: 10px;
   max-width: max-content;
 }
 
-.link::before{
-	content: "";
-	width: 100%;
-	height: 100%;
-	background-image: linear-gradient(to top, #fed330 25%, rgba(0, 0, 0, 0) 40%);
-	
-	position: absolute;
-	left: 0;
-	bottom: 2px;
-	z-index: -1;
-	
-	transform: rotate(-2deg);
-	transform-origin: left bottom
-  
+.link::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, #fed330 25%, rgba(0, 0, 0, 0) 40%);
+
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  z-index: -1;
+
+  transform: rotate(-2deg);
+  transform-origin: left bottom
 }
 
-.link:hover::before{
-	width: 0;
+.link:hover::before {
+  width: 0;
 }
 
-.link::before{
-	transition: width .1s ease-out;
+.link::before {
+  transition: width .1s ease-out;
 }
 
-.link:hover::before{
-	transition-duration: .15s;
+.link:hover::before {
+  transition-duration: .15s;
 }
 
 
@@ -682,15 +687,15 @@
 }
 
 .container2 .card2 .contentBx .color span:nth-child(2) {
-   background: #1BBFE9;
+  background: #1BBFE9;
 }
 
 .container2 .card2 .contentBx .color span:nth-child(3) {
-   background: #1B2FE9;
+  background: #1B2FE9;
 }
 
 .container2 .card2 .contentBx .color span:nth-child(4) {
-   background: #080481;
+  background: #080481;
 }
 
 .container2 .card2 .contentBx a {
@@ -711,4 +716,4 @@
   opacity: 1;
   transform: translateY(0px);
   transition-delay: .7s;
-} 
+}

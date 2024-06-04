@@ -7,10 +7,11 @@
 
 .container {
     background: linear-gradient(35deg, rgb(248, 248, 248), rgb(50, 36, 50));
-    height: 170vh;
+    height: max-content;
     padding-top: 70px;
     text-align: center;
-    line-height: 1.5;
+    line-height: 2;
+    
 }
 
 .container1 {
@@ -18,7 +19,20 @@
     display: flex;
     justify-content: center;
     height: 500px;
-    gap: 10px;
+    gap: 5px;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.navitem{
+    align-items: center;
+        justify-content: center;
+        display: flex;
+        position: relative;
 }
 
 .container1 div {
