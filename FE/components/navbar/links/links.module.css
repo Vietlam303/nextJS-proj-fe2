@@ -1,0 +1,49 @@
+.links{
+    text-align: start;
+    gap: 10px;
+    padding: 5px;
+
+}
+.links a {
+    text-decoration: none;
+}
+.btnlogout{
+    padding: 5px;
+    background-color: #EE4E4E;
+    color: greenyellow;
+    border-radius:20px;
+}
+.mobileLinks {
+   display: none;
+   z-index: 99;
+}
+.mobileLinks a {
+    text-decoration: none;
+    color: black;
+}
+.menuButton{
+    display: none;
+}
+
+@media (max-width: 768px){
+    .menuButton {
+            display: block;
+        }
+    .links{
+        display: none;
+
+    }
+        .mobileLinks {
+            position: absolute;
+            top: 100px;
+            right: 0;
+            width: 20%;
+            height: calc(100vh - 100px);
+            background-color: #41B06E;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+}

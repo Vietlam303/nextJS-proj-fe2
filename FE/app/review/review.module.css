@@ -1,0 +1,205 @@
+.container {
+    background: white;
+    height: 100vh;
+    padding-top: 50px;
+    text-align: center;
+    line-height: 1.5;
+    
+   
+}
+
+.indexing {
+    color: rgba(131, 127, 127, 0.827);
+}
+.indexing a{
+    color: rgba(131, 127, 127, 0.827);
+}
+.indexing a:hover {
+   color: blue;
+}
+
+
+.postReview {
+    margin: 50px 100px;
+    display: flex;
+    gap: 120px;
+    height:450px;
+ 
+}
+.viewPost {
+    transition: 0.5s;
+    /* perspective: 1500px; */
+    transform-style: preserve-3d;
+    border: solid 0.1px gray;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.viewPost:hover {
+    transform: translateY(-5px) translateZ(50px);
+
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+}
+
+.viewPost {
+    transition: 0.5s;
+    /* perspective: 1500px; */
+    transform-style: preserve-3d;
+    border: solid 0.1px gray;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.viewPost:hover {
+    transform: translateY(-5px) translateZ(50px);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+}
+.viewPost {
+    transition: 0.5s;
+    /* perspective: 1500px; */
+    transform-style: preserve-3d;
+    border: solid 0.1px gray;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.viewPost:hover {
+    transform: translateY(-5px) translateZ(50px);
+
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+}
+.imgContainer {
+    position: relative;
+    overflow: hidden;
+}
+.imgContainer img {
+    margin-bottom: -10px;
+    width: 100%;
+    height: 250px;
+}
+
+@keyframes move {
+    0% {
+        right: -60px;
+    }
+    100% {
+        right: 0px;
+    }
+}
+
+.imgContainer:hover .shareIcon:hover {
+    position: relative;
+    animation: move 0.5s;
+}
+
+.imgContainer:hover .shareIcon:hover .item {
+    position: relative;
+    display: unset;
+    animation: move 0.5s;
+}
+
+.share {
+    gap: 10px;
+    font-size: 25px;
+    position: absolute;
+    right: 5px;
+    bottom: -40px;
+    display: flex;
+    justify-items: nowrap;
+    transition: all 0.5s;
+}
+.imgContainer:hover .share {
+    font-size: 25px;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    display: flex;
+    justify-items: wrap;
+
+    transition: 0.5s;
+}
+.shareIcon .item {
+    display: none;
+}
+
+.textContainer {
+    position: relative;
+    inset: 10px;
+    margin: 0px 15px;
+    text-align: left;
+    overflow: hidden;
+}
+.viewPost .textContainer .readPost a{
+    text-decoration: none;
+    width: max-content;
+}
+ .viewPost .textContainer .readPost{
+   
+    display: none;
+     border: solid black 2px;
+    border-radius: 10px;
+    width: max-content;
+    padding: 5px 5px;
+    opacity: 0;
+    /* margin-bottom: -30px; */
+    /* transform: translateY(40px); */
+    
+    transition: 1s linear; 
+}
+.viewPost .textContainer .readPost:hover{
+    border-color: coral;
+    background-color: aqua;
+}
+.viewPost .textContainer:hover .readPost{
+    display: unset;
+    
+    opacity: 1;
+}
+
+
+.textContainer .type:hover {
+    color: red !important;
+}
+
+.textContainer .title a {
+    color: gray;
+    transition: .5s ;
+    /* #55b4eb */
+}
+
+.textContainer .title a:hover {
+    color: blue;
+    /* #55b4eb */
+}
+.box {
+    display: flex;
+    text-align: center;
+    gap: 20px;
+    font-size: 13px;
+    /* padding-bottom: -15px; */
+}
+
+
+/* css pagination */
+.pagination {
+    display: inline-block;
+}
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.pagination a.active {
+    background-color: #4caf50;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
