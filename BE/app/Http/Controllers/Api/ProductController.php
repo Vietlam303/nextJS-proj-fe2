@@ -14,7 +14,6 @@ use App\Models\User;
 use App\Models\Wishlist;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Pagination\Paginator;
 
 class ProductController extends Controller
 {
@@ -26,69 +25,7 @@ class ProductController extends Controller
         $products = Product::paginate(4);
         return response()->json($products);
     }
-    public function showshop(Request $request)
-    {
-        $price1 = 0;
-        $price2 = 0;
-        $queryprice = "";
-        $querysort = "";
-        $productReSearch = [];
 
-        $toprice = $request->input('toPrice');
-        $tosort = $request->input('toSort');
-        $tocattegory = $request->input('toCategory');
-
-        // Xác định giá trị của biến trung gian từ 'toPrice' và 'toSort'
-        switch ($toprice) {
-            case 1:
-                $price1 = 50000;
-                $price2 = 80000;
-                $queryprice = [$price1, $price2];
-                break;
-            case 2:
-                $price1 = 80000;
-                $price2 = 150000;
-                $queryprice = [$price1, $price2];
-                break;
-            case 3:
-                $price1 = 150000;
-                $queryprice = ['>=', $price1];
-                break;
-        }
-
-        // Xác định giá trị của biến trung gian từ 'toSort'
-        switch ($tosort) {
-            case 1:
-                $querysort = 'asc';
-                break;
-            case 2:
-                $querysort = 'desc';
-                break;
-        }
-
-       if ($toprice != 0 && $tosort != 0 && $tocattegory != 0) {
-            // Truy vấn dữ liệu từ cơ sở dữ liệu
-            $products = Product::whereBetween('price', $queryprice)
-                ->orderBy('price', $querysort);
-                
-                
-            $productCategories = ProductCategory::where('category_id', $tocattegory)->get();
-            foreach ($products as $product) {
-                foreach ($productCategories as $productcate) {
-                    if ($productcate->product_id == $product->id) {
-                        array_push($productReSearch, $product);
-                    }
-                }
-            }
-             $productshop = new Paginator($productReSearch,2);
-                
-       }
-       else{
-        $products = Product::paginate(2);
-            $productshop = $products;
-       }
-        return response()->json($productshop);
-    }
     /**
      * Show the form for creating a new resource.
      */

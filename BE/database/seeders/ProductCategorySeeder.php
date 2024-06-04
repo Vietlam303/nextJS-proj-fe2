@@ -14,8 +14,49 @@ class ProductCategorySeeder extends Seeder
      */
     public function run(): void
     {
-        for ($i = 1; $i < 7; $i++) {
-           for ($j=6; $j < 1 ; $j--) {
+        ProductCategory::factory()->create([
+            'product_id' => '1',
+            'category_id' => '2',
+        ]);
+        ProductCategory::factory()->create([
+            'product_id' => '2',
+            'category_id' => '2',
+        ]);
+        ProductCategory::factory()->create([
+            'product_id' => '3',
+            'category_id' => '3',
+        ]);
+        ProductCategory::factory()->create([
+            'product_id' => '6',
+            'category_id' => '3',
+        ]);
+        ProductCategory::factory()->create([
+            'product_id' => '6',
+            'category_id' => '1',
+        ]);
+        ProductCategory::factory()->create([
+            'product_id' => '6',
+            'category_id' => '5',
+        ]);
+        ProductCategory::factory()->create([
+            'product_id' => '7',
+            'category_id' => '3',
+        ]);
+        ProductCategory::factory()->create([
+            'product_id' => '7',
+            'category_id' => '1',
+        ]);
+        ProductCategory::factory()->create([
+            'product_id' => '8',
+            'category_id' => '1',
+        ]);
+        ProductCategory::factory()->create([
+            'product_id' => '8',
+            'category_id' => '7',
+        ]);
+
+        for ($i = 1; $i < 19; $i++) {
+           for ($j=1; $j <8 ; $j++) {
                 ProductCategory::factory()->create([
                     'product_id' => '' . $i,
                     'category_id' => '' . $j,
