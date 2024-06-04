@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
-import style from "./about.module.css"
+import style from "./blog.module.css"
 import { FaAngleRight } from "react-icons/fa6";
 
 
