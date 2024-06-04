@@ -1,0 +1,282 @@
+:root .filter {
+    --arrow-bg: rgba(255, 255, 255, 0.3);
+    --arrow-icon: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg);
+    --option-bg: white;
+    --select-bg: rgba(255, 255, 255, 0.2);
+}
+
+.container {
+    background: linear-gradient(35deg, rgb(248, 248, 248), rgb(50, 36, 50));
+    height: 170vh;
+    padding-top: 70px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.container1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    gap: 10px;
+}
+
+.container1 div {
+    flex: 0 0 120px;
+    border-radius: 0.5rem;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    box-shadow: 1px 5px 15px #1e0e3e;
+    position: relative;
+    overflow: hidden;
+}
+
+.container1 div:nth-of-type(1) {
+    background: url("https://salt.tikicdn.com/cache/280x280/ts/product/fe/8b/92/a66cbcb1c865b0fb78a3241ee75feaff.jpg.webp") no-repeat 50% / cover;
+}
+
+.container1 div:nth-of-type(2) {
+    background: url("https://salt.tikicdn.com/cache/280x280/ts/product/b4/ee/68/9318711dea7959733ad234d6a05e0a14.png.webp") no-repeat 50% / cover;
+}
+
+.container1 div:nth-of-type(3) {
+    background: url("https://salt.tikicdn.com/cache/280x280/ts/product/80/14/8b/61fb657f347d14d9d7bf6fe901001a8e.jpg.webp") no-repeat 50% / cover;
+}
+
+.container1 div:nth-of-type(4) {
+    background: url("https://salt.tikicdn.com/cache/280x280/ts/product/21/a8/5b/060f0538669d23863ededc186ffcf430.jpg.webp") no-repeat 50% / cover;
+}
+.container1 div:nth-of-type(5) {
+    background: url("https://salt.tikicdn.com/cache/280x280/ts/product/03/2f/f4/d8457c18c853f4ad4210e9cd1dc9c7c9.png.webp") no-repeat 50% / cover;
+}
+.container1 div:nth-of-type(6) {
+    background: url("https://salt.tikicdn.com/cache/280x280/ts/product/a5/76/eb/f0cd28e1b2e331ccbfc528c8827c3b07.jpg.webp") no-repeat 50% / cover;
+}
+
+.content {
+    font-size: 1.5rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    opacity: 0;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    background: rgb(2, 2, 46);
+    background: linear-gradient(0deg, rgba(2, 2, 46, 0.6755077030812324) 0%, rgba(255, 255, 255, 0) 100%);
+    transform: translatey(100%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+    visibility: hidden;
+}
+
+.container1 div:hover {
+    flex: 0 0 250px;
+    box-shadow: 1px 3px 15px #7645d8;
+    transform: translatey(-30px);
+}
+
+.container1 div:hover .content {
+    opacity: 1;
+    transform: translatey(0%);
+    visibility: visible;
+}
+
+
+
+.filter {
+    display: flex;
+    /* Sử dụng flexbox để căn chỉnh phần tử con */
+    align-items: center;
+    /* Căn chỉnh các phần tử theo chiều dọc */
+    gap: 10px;
+    /* Khoảng cách giữa các phần tử */
+}
+
+.filter select {
+    order: -1;
+    /* Đặt thứ tự của phần tử select box là -1 để đưa nó về phía trước của các phần tử khác */
+}
+
+.filter select {
+    /* Reset */
+    appearance: none;
+    border: 0;
+    outline: 0;
+    font: inherit;
+    /* Personalize */
+    width: 20rem;
+    padding: 1rem 4rem 1rem 1rem;
+    background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em,
+        linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em);
+    border-radius: 0.25em;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+    /* Remove IE arrow */
+    &::-ms-expand {
+        display: none;
+    }
+
+    /* Remove focus outline */
+    &:focus {
+        outline: none;
+    }
+
+    /* <option> colors */
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap");
+
+.container {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Istok Web", sans-serif;
+}
+
+.cardAuthor {
+    display: flex;
+    min-height: 30vh;
+}
+
+.card {
+    position: relative;
+    width: 320px;
+    height: 480px;
+    background: #2f2a2a;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    background: #ffce00;
+    transform: skewY(345deg);
+    transition: 0.5s;
+}
+
+.card:hover::before {
+    top: -70%;
+    transform: skewY(390deg);
+}
+
+.card::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: 600;
+    font-size: 6em;
+    color: rgba(0, 0, 0, 0.1);
+}
+
+.card .imgBox {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 1;
+}
+
+.card .contentBox {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.card .contentBox h3 {
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card .contentBox .price {
+    font-size: 24px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.card .contentBox .buy {
+    position: relative;
+    top: 100px;
+    opacity: 0;
+    padding: 10px 30px;
+    margin-top: 15px;
+    color: #000000;
+    text-decoration: none;
+    background: #ffce00;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+.card:hover .contentBox .buy {
+    top: 0;
+    opacity: 1;
+}
+
+.mouse {
+    height: 300px;
+    width: auto;
+}
+
+.indexing {
+    color: rgba(131, 127, 127, 0.827);
+}
+
+.indexing a:hover {
+    color: rgb(65, 65, 255);
+}
+
+.cardAuthor {
+    margin: 50px 275px;
+    display: flex;
+    gap: 150px;
+}
+
+.imgContainer {
+    position: relative;
+    overflow: hidden;
+}
+
+.imgContainer img {
+    margin-bottom: -10px;
+    width: 100%;
+    height: 250px;
+}
+
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+@keyframes move {
+    0% {
+        right: -60px;
+    }
+
+    100% {
+        right: 0px;
+    }
+}
