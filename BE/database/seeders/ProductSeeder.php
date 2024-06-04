@@ -16,8 +16,8 @@ class ProductSeeder extends Seeder
         //
         Product::factory()->create([
             'name' => 'A Poem for Every night',
-            'price' => '60000',
-            'reduced_price' => '60000',
+            'price' => '307000',
+            'reduced_price' => '291650',
             'description' => 'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur erit qui in ea voluptate',
             'image' => 'a-poem-for-every-night.jpg',
             'publishing_year' => '2013',
@@ -26,8 +26,8 @@ class ProductSeeder extends Seeder
         ]);
         Product::factory()->create([
             'name' => 'A Teaspoon of Earth and Sea',
-            'price' => '70000',
-            'reduced_price' => '70000',
+            'price' => '307000',
+            'reduced_price' => '231650',
             'description' => 'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur erit qui in ea voluptate',
             'image' => 'a-teaspoon-of-earth-and-sea.jpg',
             'publishing_year' => '2013',
@@ -36,8 +36,8 @@ class ProductSeeder extends Seeder
         ]);
         Product::factory()->create([
             'name' => 'All this has nothing to do with Me',
-            'price' => '90000',
-            'reduced_price' => '90000',
+            'price' => '307000',
+            'reduced_price' => '231650',
             'description' => 'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur erit qui in ea voluptate',
             'image' => 'all-this-has-nothing-to-do-with-me.jpg',
             'publishing_year' => '2013',
@@ -46,8 +46,8 @@ class ProductSeeder extends Seeder
         ]);
         Product::factory()->create([
             'name' => 'Bulle & Pelle',
-            'price' => '100000',
-            'reduced_price' => '100000',
+            'price' => '307000',
+            'reduced_price' => '231650',
             'description' => 'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur erit qui in ea voluptate',
             'image' => 'bulle-&-pelle.jpg',
             'publishing_year' => '2013',
@@ -56,8 +56,8 @@ class ProductSeeder extends Seeder
         ]);
         Product::factory()->create([
             'name' => 'Bulle und Pelle',
-            'price' => '200000',
-            'reduced_price' => '200000',
+            'price' => '307000',
+            'reduced_price' => '231650',
             'description' => 'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur erit qui in ea voluptate',
             'image' => 'bulle-und-pelle.jpg',
             'publishing_year' => '2013',
@@ -66,8 +66,8 @@ class ProductSeeder extends Seeder
         ]);
         Product::factory()->create([
             'name' => 'Creative Life',
-            'price' => '300000',
-            'reduced_price' => '300000',
+            'price' => '307000',
+            'reduced_price' => '231650',
             'description' => 'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur erit qui in ea voluptate',
             'image' => 'creative-life.jpg',
             'publishing_year' => '2013',
