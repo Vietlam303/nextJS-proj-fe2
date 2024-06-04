@@ -54,285 +54,300 @@ const Home = () => {
       </div>
       <hr />
       <h2>Super Sale <FaBolt color="yellow" style={{ fontSize: "1.5em" }} /></h2>
-      <div className={style.link}>
-        <Link href="" > Xem tất cả</Link>
-      </div>
-      <div className={style.cardAuthor}>
-        <div className={style.wrapper}>
-          <div className={style.container}>
-            <div className={style.top}></div>
-            <div className={style.bottom}>
-              <div className={style.left}>
-                <div className={style.details}>
-                  <h1>Book1</h1>
-                  <p>£250</p>
-                </div>
-                <div className={style.buy}>
-                  <FaShoppingCart className={style.icon} style={{ fontSize: "1.5em", marginTop: "50%" }} />
+      <Row>
+        <Col md={12} sm={12} className={style.navitem}>
+          <div className={style.link}>
+            <Link href="" > Xem tất cả</Link>
+          </div>
+        </Col>
+      </Row>
+      <Row>
+        <Col md={12} sm={12} className={style.navitem}>
+          <div className={style.cardAuthor}>
+            <div className={style.wrapper}>
+              <div className={style.container}>
+                <div className={style.top}></div>
+                <div className={style.bottom}>
+                  <div className={style.left}>
+                    <div className={style.details}>
+                      <h1>Book1</h1>
+                      <p>£250</p>
+                    </div>
+                    <div className={style.buy}>
+                      <FaShoppingCart className={style.icon} style={{ fontSize: "1.5em", marginTop: "50%" }} />
+                    </div>
+                  </div>
+                  <div className={style.right}>
+                    <div className={style.done}>
+                      <FaCheck className={style.icon} />
+                    </div>
+                    <div className={style.details}>
+                      <h1>Book</h1>
+                      <p>Added to your cart</p>
+                    </div>
+                    <div className={style.remove}>
+                      <FaTimes className={style.icon} />
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className={style.right}>
-                <div className={style.done}>
-                  <FaCheck className={style.icon} />
+              <div className={style.inside}>
+                <div className={style.icon}>
+                  <i className={style.materialicons}>-47%</i>
                 </div>
-                <div className={style.details}>
-                  <h1>Book</h1>
-                  <p>Added to your cart</p>
+                <div className={style.contents}>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Width</th>
+                        <th>Height</th>
+                      </tr>
+                      <tr>
+                        <td>3000mm</td>
+                        <td>4000mm</td>
+                      </tr>
+                      <tr>
+                        <th>Something</th>
+                        <th>Something</th>
+                      </tr>
+                      <tr>
+                        <td>200mm</td>
+                        <td>200mm</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-                <div className={style.remove}>
-                  <FaTimes className={style.icon} />
+              </div>
+            </div>
+            <div className={style.wrapper}>
+              <div className={style.container}>
+                <div className={style.top}></div>
+                <div className={style.bottom}>
+                  <div className={style.left}>
+                    <div className={style.details}>
+                      <h1>Influen</h1>
+                      <p>£250</p>
+                    </div>
+                    <div className={style.buy}>
+                      <FaShoppingCart className={style.icon} style={{ fontSize: "1.5em", marginTop: "50%" }} />
+                    </div>
+                  </div>
+                  <div className={style.right}>
+                    <div className={style.done}>
+                      <FaCheck className={style.icon} />
+                    </div>
+                    <div className={style.details}>
+                      <h1>Chair</h1>
+                      <p>Added to your cart</p>
+                    </div>
+                    <div className={style.remove}>
+                      <FaTimes className={style.icon} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className={style.inside}>
+                <div className={style.icon}>
+                  <i className={style.materialicons}>-47%</i>
+                </div>
+                <div className={style.contents}>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Width</th>
+                        <th>Height</th>
+                      </tr>
+                      <tr>
+                        <td>3000mm</td>
+                        <td>4000mm</td>
+                      </tr>
+                      <tr>
+                        <th>Something</th>
+                        <th>Something</th>
+                      </tr>
+                      <tr>
+                        <td>200mm</td>
+                        <td>200mm</td>
+                      </tr>
+                      <tr>
+                        <th>Something</th>
+                        <th>Something</th>
+                      </tr>
+                      <tr>
+                        <td>200mm</td>
+                        <td>200mm</td>
+                      </tr>
+                      <tr>
+                        <th>Something</th>
+                        <th>Something</th>
+                      </tr>
+                      <tr>
+                        <td>200mm</td>
+                        <td>200mm</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div className={style.wrapper}>
+              <div className={style.container}>
+                <div className={style.top}></div>
+                <div className={style.bottom}>
+                  <div className={style.left}>
+                    <div className={style.details}>
+                      <h1>Influen</h1>
+                      <p>£250</p>
+                    </div>
+                    <div className={style.buy}>
+                      <FaShoppingCart className={style.icon} style={{ fontSize: "1.5em", marginTop: "50%" }} />
+                    </div>
+                  </div>
+                  <div className={style.right}>
+                    <div className={style.done}>
+                      <FaCheck className={style.icon} />
+                    </div>
+                    <div className={style.details}>
+                      <h1>Chair</h1>
+                      <p>Added to your cart</p>
+                    </div>
+                    <div className={style.remove}>
+                      <FaTimes className={style.icon} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className={style.inside}>
+                <div className={style.icon}>
+                  <i className={style.materialicons}>-47%</i>
+                </div>
+                <div className={style.contents}>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Width</th>
+                        <th>Height</th>
+                      </tr>
+                      <tr>
+                        <td>3000mm</td>
+                        <td>4000mm</td>
+                      </tr>
+                      <tr>
+                        <th>Something</th>
+                        <th>Something</th>
+                      </tr>
+                      <tr>
+                        <td>200mm</td>
+                        <td>200mm</td>
+                      </tr>
+                      <tr>
+                        <th>Something</th>
+                        <th>Something</th>
+                      </tr>
+                      <tr>
+                        <td>200mm</td>
+                        <td>200mm</td>
+                      </tr>
+                      <tr>
+                        <th>Something</th>
+                        <th>Something</th>
+                      </tr>
+                      <tr>
+                        <td>200mm</td>
+                        <td>200mm</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div className={style.wrapper}>
+              <div className={style.container}>
+                <div className={style.top}></div>
+                <div className={style.bottom}>
+                  <div className={style.left}>
+                    <div className={style.details}>
+                      <h1>Influen</h1>
+                      <p>£250</p>
+                    </div>
+                    <div className={style.buy}>
+                      <FaShoppingCart className={style.icon} style={{ fontSize: "1.5em", marginTop: "50%" }} />
+                    </div>
+                  </div>
+                  <div className={style.right}>
+                    <div className={style.done}>
+                      <FaCheck className={style.icon} />
+                    </div>
+                    <div className={style.details}>
+                      <h1>Chair</h1>
+                      <p>Added to your cart</p>
+                    </div>
+                    <div className={style.remove}>
+                      <FaTimes className={style.icon} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className={style.inside}>
+                <div className={style.icon}>
+                  <i className={style.materialicons}>-47%</i>
+                </div>
+                <div className={style.contents}>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th>Width</th>
+                        <th>Height</th>
+                      </tr>
+                      <tr>
+                        <td>3000mm</td>
+                        <td>4000mm</td>
+                      </tr>
+                      <tr>
+                        <th>Something</th>
+                        <th>Something</th>
+                      </tr>
+                      <tr>
+                        <td>200mm</td>
+                        <td>200mm</td>
+                      </tr>
+                      <tr>
+                        <th>Something</th>
+                        <th>Something</th>
+                      </tr>
+                      <tr>
+                        <td>200mm</td>
+                        <td>200mm</td>
+                      </tr>
+                      <tr>
+                        <th>Something</th>
+                        <th>Something</th>
+                      </tr>
+                      <tr>
+                        <td>200mm</td>
+                        <td>200mm</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
           </div>
-          <div className={style.inside}>
-            <div className={style.icon}>
-              <i className={style.materialicons}>-47%</i>
-            </div>
-            <div className={style.contents}>
-              <table>
-                <tbody>
-                  <tr>
-                    <th>Width</th>
-                    <th>Height</th>
-                  </tr>
-                  <tr>
-                    <td>3000mm</td>
-                    <td>4000mm</td>
-                  </tr>
-                  <tr>
-                    <th>Something</th>
-                    <th>Something</th>
-                  </tr>
-                  <tr>
-                    <td>200mm</td>
-                    <td>200mm</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div className={style.wrapper}>
-          <div className={style.container}>
-            <div className={style.top}></div>
-            <div className={style.bottom}>
-              <div className={style.left}>
-                <div className={style.details}>
-                  <h1>Influen</h1>
-                  <p>£250</p>
-                </div>
-                <div className={style.buy}>
-                  <FaShoppingCart className={style.icon} style={{ fontSize: "1.5em", marginTop: "50%" }} />
-                </div>
-              </div>
-              <div className={style.right}>
-                <div className={style.done}>
-                  <FaCheck className={style.icon} />
-                </div>
-                <div className={style.details}>
-                  <h1>Chair</h1>
-                  <p>Added to your cart</p>
-                </div>
-                <div className={style.remove}>
-                  <FaTimes className={style.icon} />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className={style.inside}>
-            <div className={style.icon}>
-              <i className={style.materialicons}>-47%</i>
-            </div>
-            <div className={style.contents}>
-              <table>
-                <tbody>
-                  <tr>
-                    <th>Width</th>
-                    <th>Height</th>
-                  </tr>
-                  <tr>
-                    <td>3000mm</td>
-                    <td>4000mm</td>
-                  </tr>
-                  <tr>
-                    <th>Something</th>
-                    <th>Something</th>
-                  </tr>
-                  <tr>
-                    <td>200mm</td>
-                    <td>200mm</td>
-                  </tr>
-                  <tr>
-                    <th>Something</th>
-                    <th>Something</th>
-                  </tr>
-                  <tr>
-                    <td>200mm</td>
-                    <td>200mm</td>
-                  </tr>
-                  <tr>
-                    <th>Something</th>
-                    <th>Something</th>
-                  </tr>
-                  <tr>
-                    <td>200mm</td>
-                    <td>200mm</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div className={style.wrapper}>
-          <div className={style.container}>
-            <div className={style.top}></div>
-            <div className={style.bottom}>
-              <div className={style.left}>
-                <div className={style.details}>
-                  <h1>Influen</h1>
-                  <p>£250</p>
-                </div>
-                <div className={style.buy}>
-                  <FaShoppingCart className={style.icon} style={{ fontSize: "1.5em", marginTop: "50%" }} />
-                </div>
-              </div>
-              <div className={style.right}>
-                <div className={style.done}>
-                  <FaCheck className={style.icon} />
-                </div>
-                <div className={style.details}>
-                  <h1>Chair</h1>
-                  <p>Added to your cart</p>
-                </div>
-                <div className={style.remove}>
-                  <FaTimes className={style.icon} />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className={style.inside}>
-            <div className={style.icon}>
-              <i className={style.materialicons}>-47%</i>
-            </div>
-            <div className={style.contents}>
-              <table>
-                <tbody>
-                  <tr>
-                    <th>Width</th>
-                    <th>Height</th>
-                  </tr>
-                  <tr>
-                    <td>3000mm</td>
-                    <td>4000mm</td>
-                  </tr>
-                  <tr>
-                    <th>Something</th>
-                    <th>Something</th>
-                  </tr>
-                  <tr>
-                    <td>200mm</td>
-                    <td>200mm</td>
-                  </tr>
-                  <tr>
-                    <th>Something</th>
-                    <th>Something</th>
-                  </tr>
-                  <tr>
-                    <td>200mm</td>
-                    <td>200mm</td>
-                  </tr>
-                  <tr>
-                    <th>Something</th>
-                    <th>Something</th>
-                  </tr>
-                  <tr>
-                    <td>200mm</td>
-                    <td>200mm</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div className={style.wrapper}>
-          <div className={style.container}>
-            <div className={style.top}></div>
-            <div className={style.bottom}>
-              <div className={style.left}>
-                <div className={style.details}>
-                  <h1>Influen</h1>
-                  <p>£250</p>
-                </div>
-                <div className={style.buy}>
-                  <FaShoppingCart className={style.icon} style={{ fontSize: "1.5em", marginTop: "50%" }} />
-                </div>
-              </div>
-              <div className={style.right}>
-                <div className={style.done}>
-                  <FaCheck className={style.icon} />
-                </div>
-                <div className={style.details}>
-                  <h1>Chair</h1>
-                  <p>Added to your cart</p>
-                </div>
-                <div className={style.remove}>
-                  <FaTimes className={style.icon} />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className={style.inside}>
-            <div className={style.icon}>
-              <i className={style.materialicons}>-47%</i>
-            </div>
-            <div className={style.contents}>
-              <table>
-                <tbody>
-                  <tr>
-                    <th>Width</th>
-                    <th>Height</th>
-                  </tr>
-                  <tr>
-                    <td>3000mm</td>
-                    <td>4000mm</td>
-                  </tr>
-                  <tr>
-                    <th>Something</th>
-                    <th>Something</th>
-                  </tr>
-                  <tr>
-                    <td>200mm</td>
-                    <td>200mm</td>
-                  </tr>
-                  <tr>
-                    <th>Something</th>
-                    <th>Something</th>
-                  </tr>
-                  <tr>
-                    <td>200mm</td>
-                    <td>200mm</td>
-                  </tr>
-                  <tr>
-                    <th>Something</th>
-                    <th>Something</th>
-                  </tr>
-                  <tr>
-                    <td>200mm</td>
-                    <td>200mm</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
+        </Col>
+
+      </Row>
       <hr />
       <h2>Sách nên đọc <FaBook color="black" style={{ fontSize: "1 em" }} /></h2>
-      <div className={style.link}>
-        <Link href="" > Xem tất cả</Link>
-      </div>
-      <div className={style.cardAuthor}>
+      <Row>
+        <Col md={12} sm={12} className={style.navitem}>
+          <div className={style.link}>
+            <Link href="" > Xem tất cả</Link>
+          </div>
+        </Col>
+      </Row>
+      <Row>
+        <Col md={12} sm={12} className={style.navitem}>
+        <div className={style.cardAuthor}>
         <div className={style.card}>
           <div className={style.imgBox}>
             <Image src="/book1.png" alt="book" width={220} height={300} />
@@ -374,6 +389,9 @@ const Home = () => {
           </div>
         </div>
       </div>
+        </Col>
+      </Row>
+      
       <hr />
       <h2>Tuyển tập sách tháng 6 <FaBook color="black" style={{ fontSize: "1 em" }} /></h2>
       <div className={style.link}>
@@ -381,10 +399,10 @@ const Home = () => {
       </div>
       <Row>
         <Col md={6} sm={6} className={style.navitem}>
-          <div className={style.image}><Image src="/banner1.jpg" alt="book" width={730} height={150}  /> </div>
+          <div className={style.image}><Image src="/banner1.jpg" alt="book" width={730} height={150} /> </div>
         </Col>
         <Col md={6} sm={6} className={style.navitem}>
-          <div className={style.image}><Image src="/banner2.jpg" alt="book" width={730} height={150}  /> </div>
+          <div className={style.image}><Image src="/banner2.jpg" alt="book" width={730} height={150} /> </div>
         </Col>
       </Row>
       <Row>

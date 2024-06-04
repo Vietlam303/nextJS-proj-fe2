@@ -10,11 +10,6 @@ const Footer = () => {
     <div className={style.footer}>
       <div className={style.category}>
         <Container>
-      
-          
-        <div className={style.cate}>Category</div>
-
-        
           <Row>
             <Col>
               <div className={style.item}>
@@ -37,10 +32,10 @@ const Footer = () => {
 
               </div>
             </Col>
-            
+
 
             <Col>
-            <div className={style.item}>
+              <div className={style.item}>
                 <div className={style.itemTitle} style={{ margin: "2px 0", fontSize: "20px" }}>funny</div>
 
 
@@ -62,7 +57,7 @@ const Footer = () => {
             </Col>
 
             <Col>
-            <div className={style.item}>
+              <div className={style.item}>
                 <div className={style.itemTitle} style={{ margin: "2px 0", fontSize: "20px" }}>funny</div>
 
 
@@ -89,54 +84,54 @@ const Footer = () => {
         <Container>
           <Row>
             <Col>
-                <div className={style.title}>ABOUT ME</div>
-                <p href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus earum minima provident cumque, dolor sit?</p>
-                <h6>Address</h6>
-                <p>
-                  123 Main Street
-New York</p>
+              <div className={style.title}>ABOUT ME</div>
+              <p href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus earum minima provident cumque, dolor sit?</p>
+              <h6>Address</h6>
+              <p>
+                123 Main Street
+                New York</p>
             </Col>
             <Col>
               <div className={style.title}>ITEM 1
-            
+
               </div>
-               <p className={style.contents}>
-               <Link  href='#'>Content1</Link>
+              <p className={style.contents}>
                 <Link href='#'>Content1</Link>
                 <Link href='#'>Content1</Link>
-                </p>
+                <Link href='#'>Content1</Link>
+              </p>
             </Col>
             <Col>
-            <div className={style.title}>ITEM 2</div>
+              <div className={style.title}>ITEM 2</div>
               <p className={style.contents}>  <Link href='#'>Content1</Link>
                 <Link href='#'>Content1</Link>
                 <Link href='#'>Content1</Link></p>
             </Col>
             <Col>
-            <div className={style.title}>ITEM 3</div>
-           <p className={style.contents}> <Link  href='#'>Content1</Link>
+              <div className={style.title}>ITEM 3</div>
+              <p className={style.contents}> <Link href='#'>Content1</Link>
                 <Link href='#'>Content1</Link>
                 <Link href='#'>Content1</Link></p>
             </Col>
           </Row>
-      
+
         </Container>
 
-        </div>
-      
+      </div>
+
       <div className={style.wave}>
-       
+
 
         <div className={style.wave1}></div>
         <div className={style.wave2}></div>
         <div className={style.wave3}></div>
-        
+
       </div>
       <div className={style.copyright}>
-          <p> <FaCopyright style={{marginTop : '5px' , marginRight : '5px'}} /> 2024 , Book store</p>
-          
-          <p>Design by nhom 10</p>
-        </div>
+        <p> <FaCopyright style={{ marginTop: '5px', marginRight: '5px' }} /> 2024 , Book store</p>
+
+        <p>Design by nhom 10</p>
+      </div>
     </div>
   )
 }

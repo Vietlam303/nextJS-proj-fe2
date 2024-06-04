@@ -4,7 +4,7 @@
   margin: 20px 150px 20px 150px;
   overflow: hidden;
   position: relative;
-  width: 2000px;
+  width: auto;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
 }
 
@@ -52,10 +52,11 @@
 
 .container {
   background: linear-gradient(35deg, rgb(248, 248, 248), rgb(50, 36, 50));
-  height: 170vh;
+  height: auto;
   padding-top: 70px;
   text-align: center;
   line-height: 1.5;
+
 }
 
 .container1 {
@@ -150,7 +151,6 @@
 .cardAuthor {
   display: flex;
   min-height: 30vh;
-  
 }
 
 .card {
@@ -256,9 +256,12 @@
 }
 
 .cardAuthor {
-  margin: 50px 275px;
+  margin: 50px 0 50px 0;
   display: flex;
   gap: 150px;
+  max-width: max-content;
+  text-align: center;
+  padding-left: 150px;
 }
 
 .imgContainer {
@@ -299,13 +302,13 @@
   width: 300px;
   height: 500px;
   background: white;
-  margin: auto;
   position: relative;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0;
   transform: scale(0.95);
   transition: box-shadow 0.5s, transform 0.5s;
+  max-width: max-content;
 }
 
 .wrapper:hover {
@@ -493,9 +496,9 @@
 	color: #000000;
 	font-size: 16px;
 	font-weight: 700;
-
 	text-decoration: none;
 	text-transform: uppercase;
+  max-width: max-content;
 }
 
 .link{
@@ -506,6 +509,7 @@
 	padding-left: 10px;
 	padding-bottom: 5px;
 	padding-right: 10px;
+  max-width: max-content;
 }
 
 .link::before{
@@ -519,9 +523,9 @@
 	bottom: 2px;
 	z-index: -1;
 	
-	will-change: width;
 	transform: rotate(-2deg);
 	transform-origin: left bottom
+  
 }
 
 .link:hover::before{
@@ -551,6 +555,7 @@
 .container2 {
   position: relative;
   margin: 0 45px;
+  max-width: max-content;
 }
 
 .container2 .card2 {
