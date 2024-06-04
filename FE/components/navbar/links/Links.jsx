@@ -30,6 +30,10 @@ const Links = () => {
             path: "/contact",
         },
         {
+            title: "Author",
+            path: "/author",
+        },
+        {
             title: "Blog",
             path: "/blog",
         }
