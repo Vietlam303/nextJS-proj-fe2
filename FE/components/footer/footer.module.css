@@ -1,0 +1,139 @@
+
+.category .itemTitle:hover {
+    color: rgba(27, 168, 250, 0.826);
+}
+.category .cate {
+   
+    max-width: max-content;
+    border-bottom: 3px solid black ;
+    margin-bottom: 30px;
+}
+
+.category .itemTitle {
+    width: max-content;
+}
+.category {
+    padding: 20px 0;
+}
+.category .item img {
+    border: solid 1px black ;
+    border-radius : 25px ;
+     padding: 0 3px;
+     margin-top: 15px;
+}
+
+.footer .category .item:hover {
+    transform: translateY(-5px) translateZ(50px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.footer .category .item {
+    background: rgb(243, 239, 239);
+    padding: 10px 30px;
+    transition: 0.5s;
+    /* perspective: 1500px; */
+    transform-style: preserve-3d;
+    border: solid 0.1px gray;
+    border-radius: 20px;
+    /* overflow: hidden; */
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3);
+}
+.footerItem {
+    height: auto;
+    margin-top: 30px;
+    padding: 50px 0;
+    border-bottom: solid gray 1px;
+    background-color: rgb(228, 239, 249);
+    /* margin-bottom: -20px; */
+}
+.footerItem .title
+{   
+    margin-bottom: 20px;
+    border-bottom: 1px gray solid;
+}
+.footerItem p{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    
+    color: black;
+    font-size: 15px;
+}
+.footerItem p a {
+    color: black;
+    text-decoration: none;
+    transition: .5s;
+}
+.footerItem a:hover {
+    font-size: 17px;
+    color: rgb(147, 208, 246);
+}
+.footer{
+    overflow: hidden;
+}
+.wave {
+    position: relative;
+    margin-top: 150px;
+    inset:  0;
+}
+.copyright{
+    position: relative;
+    background-color: #388f9f;
+    font-size: 20px;
+    display:  flex;
+    justify-content: space-between;
+    z-index: 999;
+}
+.copyright p{
+    margin-top: 20px;
+    display: flex;
+    padding: 0px 59px;
+}
+.wave1,
+.wave2,.wave3 {     
+      position: absolute;
+    background: url(../../public/wave.svg);
+    width: 4000px;
+    height: 200px;
+    text-align: end;
+    
+    left: 0;
+}
+
+.wave1 {
+  
+  
+    animation: move1 4s -2s infinite alternate ,move2 3s infinite  alternate;
+    /* transform: translateX(300px); */
+}
+
+.wave2 {
+  
+ 
+    animation: move1 7s  -1s infinite alternate ,move2 2s infinite  alternate;
+}
+.wave3 {
+   
+
+    animation: move1 5s infinite alternate ,move2 1s infinite  alternate;
+
+}
+
+@keyframes move1 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-1000px);
+    }
+}
+
+@keyframes move2 {
+    0% {
+       bottom: -100px
+    }
+
+    100% {
+      bottom: -80px;
+    }
+} 
