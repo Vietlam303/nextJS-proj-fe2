@@ -15,7 +15,7 @@ const Links = () => {
         },
         {
             title: "Shop Book",
-            path: "/shop",
+            path: "/shopbook",
         },
         {
             title: "About",
