@@ -175,19 +175,19 @@ export const ShopPage = () => {
                     <div className={styles.container}>
                         <div className={styles.containerbaner}>
                             <Row className={styles.rowbanner}>
-                               <motion.div
+                                <motion.div
                                     initial={{ opacity: 0, scale: 0 }}
                                     animate={{ opacity: 1, scale: 1 }}
                                     exit={{ opacity: 0, scale: 0 }}
                                     transition={{ delay: .5 }}
-                               >
+                                >
                                     {objects.map((object) => (
                                         <div className={styles.star} key={object.id} style={{ position: 'absolute', left: object.position.x, top: object.position.y, transform: `translate3d(0, 0, ${object.translateZ})` }}>
                                             <FontAwesomeIcon icon={faStar} />
                                         </div>
                                     ))}
-                               </motion.div>
-                               <Col>
+                                </motion.div>
+                                <Col>
                                     <motion.div
                                         initial={{ opacity: 0, x: 0 }}
                                         animate={{ opacity: 1, x: 100 }}
@@ -202,8 +202,8 @@ export const ShopPage = () => {
                                         </>
 
                                     </motion.div>
-                               </Col>
-                               <Col>
+                                </Col>
+                                <Col>
                                     <motion.div
                                         initial={{ opacity: 0, scale: 2 }}
                                         animate={{ opacity: 1, scale: 1 }}
@@ -218,7 +218,7 @@ export const ShopPage = () => {
                                             </div>
                                         </>
                                     </motion.div>
-                               </Col>
+                                </Col>
 
                             </Row>
                         </div>
@@ -346,16 +346,17 @@ export const ShopPage = () => {
                                             </div>
                                         </Col>
                                     ))}
+
+                                    <div className={styles.pagination}>
+                                        {!isAllProductsLoaded && (
+                                            <Button variant="outline" onClick={handleLoadMore} disabled={isLoading1}>
+                                                Load More
+                                            </Button>
+                                        )}
+                                    </div>
                                 </Row>
                             </motion.div>
 
-                            <div className={styles.pagination}>
-                                {!isAllProductsLoaded && (
-                                    <Button variant="outline" onClick={handleLoadMore} disabled={isLoading1}>
-                                        Load More
-                                    </Button>
-                                )}
-                            </div>
                             <ModalDetaill
                                 statusModal={statusModal}
                                 setStatusModal={setStatusModal}
