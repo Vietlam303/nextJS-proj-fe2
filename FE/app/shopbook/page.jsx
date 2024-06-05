@@ -211,55 +211,55 @@ const ShopBookPage = () =>{
                transition={{ delay: 0.3 }}
             >
                <div className={styles.container}>
-                  <div className={styles.containerbaner}>
-                     <Row className={styles.rowbanner}>
-                        <motion.div
-                           initial={{ opacity: 0, scale: 0 }}
-                           animate={{ opacity: 1, scale: 1 }}
-                           exit={{ opacity: 0, scale: 0 }}
-                           transition={{ delay: .5 }}
-                        >
-                           {objects.map((object) => (
-                              <div className={styles.star} key={object.id} style={{ position: 'absolute', left: object.position.x, top: object.position.y, transform: `translate3d(0, 0, ${object.translateZ})` }}>
-                                 <FontAwesomeIcon icon={faStar} />
-                              </div>
-                           ))}
-                        </motion.div>
-                        <Col>
+                     <div className={styles.containerbanner}>
+                        <Row className={styles.rowbanner}>
                            <motion.div
-                              initial={{ opacity: 0, x: 0 }}
-                              animate={{ opacity: 1, x: 100 }}
-                              exit={{ opacity: 0, x: 0 }}
+                              initial={{ opacity: 0, scale: 0 }}
+                              animate={{ opacity: 1, scale: 1 }}
+                              exit={{ opacity: 0, scale: 0 }}
                               transition={{ delay: .5 }}
                            >
-                              <>
-                                 <div className={styles.imgbanner}>
-
-                                    <Image src='/images/products/bulle-und-pelle.jpg' alt="bulle-und-pelle" width={250} height={350} />
+                              {objects.map((object) => (
+                                 <div className={styles.star} key={object.id} style={{ position: 'absolute', left: object.position.x, top: object.position.y, transform: `translate3d(0, 0, ${object.translateZ})` }}>
+                                    <FontAwesomeIcon icon={faStar} />
                                  </div>
-                              </>
-
+                              ))}
                            </motion.div>
-                        </Col>
-                        <Col>
-                           <motion.div
-                              initial={{ opacity: 0, scale: 2 }}
-                              animate={{ opacity: 1, scale: 1 }}
-                              exit={{ opacity: 0, scale: 1 }}
-                              transition={{ delay: 1 }}
-                           >
-                              <>
-                                 <div className={styles.infobanner}>
-                                    <h1>Bulle und Pelle</h1>
-                                    <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur erit qui in ea voluptate</p>
-                                    <Button variant="outline">Shop Now</Button>
-                                 </div>
-                              </>
-                           </motion.div>
-                        </Col>
+                           <Col>
+                              <motion.div
+                                 initial={{ opacity: 0, x: 0 }}
+                                 animate={{ opacity: 1, x: 100 }}
+                                 exit={{ opacity: 0, x: 0 }}
+                                 transition={{ delay: .5 }}
+                              >
+                                 <>
+                                    <div className={styles.imgbanner}>
 
-                     </Row>
-                  </div>
+                                       <Image src='/images/products/bulle-und-pelle.jpg' alt="bulle-und-pelle" width={250} height={350} />
+                                    </div>
+                                 </>
+
+                              </motion.div>
+                           </Col>
+                           <Col>
+                              <motion.div
+                                 initial={{ opacity: 0, scale: 2 }}
+                                 animate={{ opacity: 1, scale: 1 }}
+                                 exit={{ opacity: 0, scale: 1 }}
+                                 transition={{ delay: 1 }}
+                              >
+                                 <>
+                                    <div className={styles.infobanner}>
+                                       <h1>Bulle und Pelle</h1>
+                                       <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur erit qui in ea voluptate</p>
+                                       <Button variant="outline">Shop Now</Button>
+                                    </div>
+                                 </>
+                              </motion.div>
+                           </Col>
+
+                        </Row>
+                     </div>
                   <Container>
                      <Row className={styles.linkshop}>
                         <Col><h3>Shop</h3> </Col>
