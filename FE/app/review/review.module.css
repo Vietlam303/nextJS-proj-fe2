@@ -4,18 +4,20 @@
     padding-top: 50px;
     text-align: center;
     line-height: 1.5;
-    
-   
+
+
 }
 
 .indexing {
     color: rgba(131, 127, 127, 0.827);
 }
-.indexing a{
+
+.indexing a {
     color: rgba(131, 127, 127, 0.827);
 }
+
 .indexing a:hover {
-   color: blue;
+    color: blue;
 }
 
 
@@ -23,10 +25,12 @@
     margin: 50px 100px;
     display: flex;
     gap: 120px;
-    height:450px;
- 
+    height: 450px;
+
 }
+
 .viewPost {
+    height: fit-content;
     transition: 0.5s;
     /* perspective: 1500px; */
     transform-style: preserve-3d;
@@ -56,6 +60,7 @@
     transform: translateY(-5px) translateZ(50px);
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
 }
+
 .viewPost {
     transition: 0.5s;
     /* perspective: 1500px; */
@@ -71,10 +76,12 @@
 
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
 }
+
 .imgContainer {
     position: relative;
     overflow: hidden;
 }
+
 .imgContainer img {
     margin-bottom: -10px;
     width: 100%;
@@ -85,6 +92,7 @@
     0% {
         right: -60px;
     }
+
     100% {
         right: 0px;
     }
@@ -111,6 +119,7 @@
     justify-items: nowrap;
     transition: all 0.5s;
 }
+
 .imgContainer:hover .share {
     font-size: 25px;
     position: absolute;
@@ -121,6 +130,7 @@
 
     transition: 0.5s;
 }
+
 .shareIcon .item {
     display: none;
 }
@@ -132,78 +142,88 @@
     text-align: left;
     overflow: hidden;
 }
+
 .readPost {
     position: relative;
-    
+
 }
-.readPost::before{
+
+.readPost::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width:0;
+    width: 0;
     height: 100%;
     z-index: -1;
-    background-color: aqua; 
+    background-color: aqua;
     transition: .5s;
 }
-.readPost:hover:before{
+
+.readPost:hover:before {
     width: 100%;
 }
-.viewPost .textContainer .readPost a{
+
+.viewPost .textContainer .readPost a {
     text-decoration: none;
     width: max-content;
 }
- .viewPost .textContainer .readPost{
-   
+
+.viewPost .textContainer .readPost {
+
     display: none;
-     border: solid black 2px;
+    border: solid black 2px;
     border-radius: 10px;
     width: max-content;
     padding: 5px 5px;
     opacity: 0;
     /* margin-bottom: -30px; */
     /* transform: translateY(40px); */
-    
-    transition: 1s linear; 
+
+    transition: 1s linear;
 }
-.viewPost .textContainer .readPost:hover{
+
+.viewPost .textContainer .readPost:hover {
     border-color: coral;
     background-color: aqua;
 }
-.viewPost .textContainer:hover .readPost{
+
+.viewPost .textContainer:hover .readPost {
     display: unset;
-    
+
     opacity: 1;
 }
 
 .textContainer .type {
     position: relative;
 }
-.textContainer .type::before{
+
+.textContainer .type::before {
     content: '';
     position: absolute;
-   
+
     left: 50%;
-    transform: translate(-50% , 0);
+    transform: translate(-50%, 0);
     bottom: 0px;
-    width:0;
+    width: 0;
     height: 1%;
     z-index: -1;
-    background-color: aqua; 
+    background-color: aqua;
     transition: .5s;
 
 }
-.textContainer .type:hover:before{
+
+.textContainer .type:hover:before {
     width: 100%;
 }
+
 .textContainer .type:hover {
     color: red !important;
 }
 
 .textContainer .title a {
     color: gray;
-    transition: .5s ;
+    transition: .5s;
     /* #55b4eb */
 }
 
@@ -211,6 +231,7 @@
     color: blue;
     /* #55b4eb */
 }
+
 .box {
     display: flex;
     text-align: center;
@@ -223,7 +244,9 @@
 /* css pagination */
 .pagination {
     display: inline-block;
+    margin: 100px 0;
 }
+
 .pagination a {
     color: black;
     float: left;

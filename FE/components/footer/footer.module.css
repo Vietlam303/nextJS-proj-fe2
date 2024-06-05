@@ -41,6 +41,9 @@
      padding: 0 3px;
      margin-top: 15px;
 }
+.footer{
+    margin-top: 200px;
+}
 
 .footer .category .item:hover {
     transform: translateY(-5px) translateZ(50px);
