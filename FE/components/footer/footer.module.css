@@ -12,6 +12,26 @@
 .category .itemTitle {
     width: max-content;
 }
+.itemTitle {
+    position: relative;
+}
+.itemTitle::before{
+    content: '';
+    position: absolute;
+   
+    left: 50%;
+    transform: translate(-50% , 0);
+    bottom: 0px;
+    width:0;
+    height: 1%;
+    z-index: -1;
+    background-color: red; 
+    transition: .5s;
+
+}
+ .itemTitle:hover:before{
+    width: 100%;
+}
 .category {
     padding: 20px 0;
 }
