@@ -132,6 +132,24 @@
     text-align: left;
     overflow: hidden;
 }
+.readPost {
+    position: relative;
+    
+}
+.readPost::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:0;
+    height: 100%;
+    z-index: -1;
+    background-color: aqua; 
+    transition: .5s;
+}
+.readPost:hover:before{
+    width: 100%;
+}
 .viewPost .textContainer .readPost a{
     text-decoration: none;
     width: max-content;
@@ -159,7 +177,26 @@
     opacity: 1;
 }
 
+.textContainer .type {
+    position: relative;
+}
+.textContainer .type::before{
+    content: '';
+    position: absolute;
+   
+    left: 50%;
+    transform: translate(-50% , 0);
+    bottom: 0px;
+    width:0;
+    height: 1%;
+    z-index: -1;
+    background-color: aqua; 
+    transition: .5s;
 
+}
+.textContainer .type:hover:before{
+    width: 100%;
+}
 .textContainer .type:hover {
     color: red !important;
 }
