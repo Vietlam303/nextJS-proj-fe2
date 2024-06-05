@@ -1,0 +1,70 @@
+.contact {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+    margin: 100px;
+}
+.form
+{   padding: 40px 40px;
+    background-color: rgba(188, 171, 171, 0.61);
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    gap: 30px;
+    height: auto;
+    margin-left:-150px ;
+    inset: 0;
+}
+.form input{
+
+    border-radius: 10px;
+    padding: 3px;
+}
+.form .submit {
+    position: relative;
+   left: 40%;
+    width: 80px;
+    background-color: white;
+    z-index: 99;
+    transition: .5s;
+    border-radius: 15px;
+    overflow: hidden;
+    transform: scale(1);
+}
+.form .submit:hover {
+    transform: scale(1.2);
+}
+.form button::after{
+    content: '';
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50% ,0);
+    position: absolute;
+    background-color: aqua;
+    transition: .5s;
+    z-index: -1;
+   
+} 
+ .form button:hover:after{
+    width: 100%;
+}
+.infor {
+    margin-left: -24px;
+    padding: 56px;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    gap: 20px;
+    background-color: rgba(29, 24, 24, 0.527);
+    color: white;
+    position: relative;
+    inset: 0;
+    height: auto;
+}

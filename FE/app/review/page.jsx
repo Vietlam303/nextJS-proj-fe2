@@ -10,12 +10,10 @@ import { FaAngleRight } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa";
 import { useState } from "react";
 
-// import { useRouter } from "next/router";
-import { useRouter } from "next/navigation";
+
 const reviewPage = () => {
  
-    const router = useRouter();
-    const {pathName} = router;
+
     const [hovered, setHovered] = useState(false); // Sử dụng useState để theo dõi trạng thái hover
     return (
        
@@ -62,7 +60,7 @@ const reviewPage = () => {
                                 ) : (
                                     <div className={style.readPost}>
                                         {/* Nội dung mặc định */}
-                                        <Link href="#">
+                                        <Link href="review/singlePost-1">
                                             Read now <FaAngleRight fontSize={10} />
                                         </Link>
 
@@ -112,7 +110,7 @@ const reviewPage = () => {
                           ) : (
                               <div className={style.readPost}>
                                   {/* Nội dung mặc định */}
-                                  <Link href="#">
+                                  <Link href="review/singlePost-2">
                                       Read now <FaAngleRight fontSize={10} />
                                   </Link>
 
@@ -163,7 +161,7 @@ const reviewPage = () => {
                             ) : (
                                 <div className={style.readPost}>
                                     {/* Nội dung mặc định */}
-                                    <Link href="#">
+                                    <Link href="review/singlePost-3">
                                         Read now <FaAngleRight fontSize={10} />
                                     </Link>
 
