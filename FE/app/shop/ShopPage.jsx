@@ -108,7 +108,7 @@ export const ShopPage = () => {
     }, [data2]);
 
     useEffect(() => {
-        generateRandomObjects(20);
+        generateRandomObjects(30);
     }, []);
     // State for controlling the open/close state of the filter
     const [open, setOpen] = useState(false);
